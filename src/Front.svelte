@@ -1,6 +1,6 @@
 <script>
-import {fhir, patient, documentId} from 'dips-smart-on-fhir-svelte'
-import { writable, derived } from "svelte/store";
+// import {fhir, patient, documentId} from 'dips-smart-on-fhir-svelte'
+// import { writable, derived } from "svelte/store";
 import { patientName } from "./SmartOnFhirStore";
 
 	export let name;
@@ -9,7 +9,7 @@ import { patientName } from "./SmartOnFhirStore";
 
 <main>
 	<h1>Helloo {$patientName}!</h1>
-	<h2>Document: {$documentId}</h2>
+	<!-- <h2>Document: {$documentId}</h2> -->
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
 </main>
 
