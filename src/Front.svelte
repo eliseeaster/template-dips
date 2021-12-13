@@ -8,7 +8,7 @@ import { patientName } from "./SmartOnFhirStore";
 </script>
 
 <main>
-	<h1>Hello {$patientName}!</h1>
+	<h1>Helloo {$patientName}!</h1>
 	<h2>Document: {$documentId}</h2>
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
 </main>
