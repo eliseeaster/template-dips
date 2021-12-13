@@ -1,6 +1,6 @@
 <script>
 	import {Router, Route} from "svelte-routing";
-	import Launch from "./launch.svelte";
+	import Launch from "./Launch.svelte";
     import Front from "./Front.svelte"
 
 

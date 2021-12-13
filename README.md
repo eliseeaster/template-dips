@@ -1,11 +1,11 @@
 # svelte app
 
-This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template-webpack.
+This is a project template for svelte based DIPS apps. It lives at https://github.com/eliseeaster/template-dips.
 
 To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
 
 ```bash
-npx degit sveltejs/template-webpack svelte-app
+npx degit eliseeaster/template-dips svelte-app
 cd svelte-app
 ```
 
@@ -27,7 +27,11 @@ npm install
 npm run dev
 ```
 
-Navigate to [localhost:8080](http://localhost:8080). You should see your app running. Edit a component file in `src`, save it, and the page should reload with your changes.
+Navigate to [localhost:9000](http://localhost:9000). You should see your app running. Edit a component file in `src`, save it, and the page should reload with your changes.
+
+## Launch page
+Change iss parameter to change FHIR api.
+Change launch parameter to change document refrence. 
 
 
 ## Deploying to the web
@@ -62,3 +66,4 @@ Then, from within your project folder:
 npm run build
 surge public
 ```
+
