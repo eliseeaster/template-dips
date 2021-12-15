@@ -5,6 +5,7 @@ import {render, fireEvent} from '@testing-library/svelte'
 import '@testing-library/jest-dom'
 
 import Comp from './Comp.svelte'
+import {addNumbersComp} from './Comp.svelte'
 
 test('shows proper heading when rendered', () => {
   const {getByText} = render(Comp, {name: 'World'})
@@ -23,3 +24,8 @@ test('changes button text on click', async () => {
 
   expect(button).toHaveTextContent('Button Clicked')
 })
+
+// test("add numbers", () => {
+//   let s = addNumbersComp(2,3);
+//   expect(s).toBe(5);
+// })

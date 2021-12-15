@@ -6,6 +6,11 @@
 	function handleClick() {
 	  buttonText = 'Button Clicked'
 	}
+
+	export const testString = "Hei"
+	export const testString2 = "Heii"
+
+	
   </script>
   
   <h1>Hello {name}!</h1>

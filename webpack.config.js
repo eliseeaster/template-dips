@@ -48,7 +48,9 @@ module.exports = {
 				resolve: {
 					fullySpecified: false
 				}
-			}
+			},
+			
+
 		]
 	},
 	mode,
