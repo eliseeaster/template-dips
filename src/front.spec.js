@@ -60,14 +60,16 @@ test('shows the right patientName', () => {
       //     patientName: mockPatientName 
       // }));
       
-      jest.mock('./SmartOnFhirStore', () => () => ({  
-        patientName: mockPatientName 
-      }));
+      jest.mock('./SmartOnFhirStore', () => {  
+        return {
+          patientName: (args) => mockPatientName
+        }
+      });
 
       console.log(patientName)
         
     //const {getByText} = render(Front, { props: {name: 'World', patientName: mockPatientName}})
-    // const {getByText} = render(Front, {name: 'World'})
-    //expect(getByText('Helloo Truls')).toBeInTheDocument()
+    const {getByText} = render(Front, {name: 'World'})
+    expect(getByText('Helloo Truls')).toBeInTheDocument()
   })
 

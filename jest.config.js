@@ -10,6 +10,7 @@ module.exports = {
     moduleDirectories: ["node_modules", "src"],
     // moduleDirectories: ["node_modules", "bower_components", "shared"],
     testEnvironment: 'jest-environment-jsdom',
+    testPathIgnorePatterns: ["cypress/"], //Ignoring cypress tests
 
     // testPathIgnorePatterns: ["node_modules"],
     // bail: false,
