@@ -32,7 +32,7 @@ jest.mock("./Comp.svelte", () => ({
   })
 
   test('shows Heii when rendered', () => {
-    const {getByText} = render(Front, {name: 'World'})
+    const {getByText} = render(Front, {name: 'Woorld'})
     expect(getByText('Heii')).toBeInTheDocument()
   })
 
@@ -50,6 +50,21 @@ import { patientName } from "./SmartOnFhirStore";
 //         patientName: mockPatientName,
 //     }
 // });
+
+describe('./SmartOnFhirStore.js', () => {
+  let idk1 = jest.fn();
+
+  beforeEach(() => {
+    Object.defineProperty(window, './SmartOnFhirStore.js', {
+      value: {
+        idk: idk1
+      }
+    })
+  })
+})
+
+
+
 
 
 
