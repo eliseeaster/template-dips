@@ -38,5 +38,3 @@
 		}
 	}
 </style>
-
-export default Front;
