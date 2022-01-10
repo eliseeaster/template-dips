@@ -1,6 +1,10 @@
 import {render, fireEvent, getByText} from '@testing-library/svelte'
 import '@testing-library/jest-dom'
 
+import { tick } from "svelte";
+import { get } from "svelte/store";
+import {storeString} from "./Comp"
+
 import Front from './Front.svelte'
 
 const addNumbers = require("./AddNumbers.js");
@@ -35,6 +39,19 @@ jest.mock("./Comp.svelte", () => ({
     const {getByText} = render(Front, {name: 'World'})
     expect(getByText('Heii')).toBeInTheDocument()
   })
+
+  // beforeEach(() => {
+  //   global.window = {};
+  //   // storeString.set("")
+  // });
+
+
+  // test('Check store value', async () => {
+  //   storeString.set("Nei")
+  //   await tick();
+  //   await tick();
+  //   expect(get(storeString)).toEqual("Nei");
+  // })
 
 
 // jest.doMock("./SmartOnFhirStore.js", () => ({

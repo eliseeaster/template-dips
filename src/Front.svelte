@@ -3,7 +3,7 @@
 	import { patientName } from "./SmartOnFhirStore";
 	import {fhir, patient, documentId} from 'dips-smart-on-fhir-svelte'
 
-	import {testString, testString2} from "./Comp.svelte"
+	import {testString, testString2, storeString} from "./Comp.svelte"
 
 	export let name;
 
@@ -15,6 +15,7 @@
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
 	<p>{testString}</p>
 	<p>{testString2}</p>
+	<p>{$storeString}</p>
 </main>
 
 <style>
