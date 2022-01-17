@@ -1,6 +1,9 @@
 import { writable } from "svelte/store";
 
-export const price = writable("");
+const initialValue = "";
+export const price = writable(initialValue);
+
+export const reset = () => price.set(initialValue);
 
 export const fetch = async () => {
   const response = await window.fetch("/price", { method: "GET" });
