@@ -9,6 +9,8 @@ import { price,
 import PriceModule from "../src/stores/price.js";
 import { render } from '@testing-library/svelte';
 
+import { halla } from "../src/CallbackComponent.svelte";
+
 
 // const fetchOkResponse = data =>
 //   Promise.resolve({ ok: true, json: () => Promise.resolve(data) });
@@ -105,15 +107,17 @@ describe(CallbackComponent.name, () => {
   });
   // ... previous two tests ...
 
-  it("fetches prices on mount", async () => {
-    const spy = jest.spyOn(CallbackComponent.prototype, "hei");
-    mount(CallbackComponent);
-    await tick();
-    // m.hei();
-    // expect(m.hei).toHaveBeenCalledTimes(1);
-    expect(spy).toHaveBeenCalled();
-    spy.mockClear();
-  });
+  // it("fetches prices on mount", async () => {
+  //   const spy = jest.spyOn(CallbackComponent.prototype, "hei");
+  //   mount(CallbackComponent);
+  //   await tick();
+  //   // m.hei();
+  //   // expect(m.hei).toHaveBeenCalledTimes(1);
+  //   expect(spy).toHaveBeenCalled();
+  //   spy.mockClear();
+  // });
+
+  
 
   // it("fetches prices on mount", async () => {
 
@@ -133,3 +137,14 @@ describe(CallbackComponent.name, () => {
   //   expect(window.hei).toHaveBeenCalled();
   // });
 });
+
+describe('My component', () => {
+  it('should call getData', () => {
+    
+    const spy = jest.spyOn(CallbackComponent.prototype, 'halla');
+    //halla();
+    halla();
+    //wrapper.find('button').simulate('click')
+    expect(spy).toHaveBeenCalledTimes(1)
+  });
+})

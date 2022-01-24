@@ -6,7 +6,10 @@
     console.log("HEI");
     return "hallo";
   }
-  hei();
+
+  export const halla = () => {
+    return "halla";
+  };
   
   onMount(fetchPrice);
 

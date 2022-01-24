@@ -27,6 +27,7 @@
     "@testing-library/jest-dom": "^5.16.1",
     "babel-plugin-rewire-exports": "^2.3.0",
     "dips-smart-on-fhir-svelte": "^1.0.1",
+    "enzyme": "^3.11.0",
     "rollup-plugin-babel": "^4.4.0",
     "svelte-routing": "^1.6.0"
   }
