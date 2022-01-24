@@ -7,6 +7,7 @@ import { price,
   restore } from "../src/stores/price.js";
 
 import PriceModule from "../src/stores/price.js";
+import { render } from '@testing-library/svelte';
 
 
 // const fetchOkResponse = data =>
@@ -106,10 +107,22 @@ describe(CallbackComponent.name, () => {
 
   it("fetches prices on mount", async () => {
     const spy = jest.spyOn(CallbackComponent.prototype, "hei");
-    const m = mount(CallbackComponent);
+    mount(CallbackComponent);
     await tick();
+    // m.hei();
+    // expect(m.hei).toHaveBeenCalledTimes(1);
     expect(spy).toHaveBeenCalled();
+    spy.mockClear();
   });
+
+  // it("fetches prices on mount", async () => {
+
+  //   const app = render(CallbackComponent);
+
+  //   const mock = jest.fn();
+  //   expect(mock).toHaveBeenCalled();
+
+  // });
 
 
 
