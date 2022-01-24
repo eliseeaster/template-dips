@@ -26,7 +26,6 @@
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "babel-plugin-rewire-exports": "^2.3.0",
-    "babel-webpack-plugin": "^0.1.2",
     "dips-smart-on-fhir-svelte": "^1.0.1",
     "svelte-routing": "^1.6.0"
   }
