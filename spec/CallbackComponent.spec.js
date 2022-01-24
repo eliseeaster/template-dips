@@ -58,6 +58,9 @@ describe(CallbackComponent.name, () => {
   asSvelteComponent();
 
   beforeEach(() => {
+
+
+    
     //jest.mock("../src/stores/price.js", fetchPrice() => false);
     //fetchPrice = jest.fn().mockReturnValue(() => 42)
     //global.window = {};
@@ -79,7 +82,7 @@ describe(CallbackComponent.name, () => {
     // rewire$fetch(spy = jest.spyOn());
     // rewire$fetch(jest.fn(fetch)); 
 
-    let spy = jest.spyOn(PriceModule, "fetch");
+    //let spy = jest.spyOn(PriceModule, "fetch");
   });
 
 
@@ -102,10 +105,15 @@ describe(CallbackComponent.name, () => {
   // ... previous two tests ...
 
   it("fetches prices on mount", async () => {
-    mount(CallbackComponent);
+    const spy = jest.spyOn(CallbackComponent.prototype, "hei");
+    let m = mount(CallbackComponent);
+    m.update();
     await tick();
     expect(spy).toHaveBeenCalled();
   });
+
+
+
 
   // it("calls on hei", () => {
   //   mount(CallbackComponent);
