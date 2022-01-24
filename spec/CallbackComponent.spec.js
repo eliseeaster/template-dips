@@ -104,12 +104,12 @@ describe(CallbackComponent.name, () => {
   });
   // ... previous two tests ...
 
-  // it("fetches prices on mount", async () => {
-  //   const spy = jest.spyOn(CallbackComponent.prototype, "hei");
-  //   mount(CallbackComponent);
-  //   await tick();
-  //   expect(spy).toHaveBeenCalled();
-  // });
+  it("fetches prices on mount", async () => {
+    const spy = jest.spyOn(CallbackComponent.prototype, "hei");
+    const m = mount(CallbackComponent);
+    await tick();
+    expect(spy).toHaveBeenCalled();
+  });
 
 
 
